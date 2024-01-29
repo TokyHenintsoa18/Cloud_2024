@@ -31,12 +31,3 @@ create or replace view stat_parcelle as
 select (count(id_parcelle)*100/(select count(*) from v_information_parcelle_par_terrain)) as stat_parcelle,id_terrain  
 from v_information_parcelle_par_terrain group by id_terrain;
 
-
-
-drop view v_information_parcelle_par_terrain;
-drop view v_prix_rendement_prevision;
-drop view v_sum_prix_rendement_prevision;
- drop view v_rendement_par_qte;
- drop view v_prix_rendement_reel
- drop view v_sum_prix_rendement_reel
- drop view stat_parcelle;
